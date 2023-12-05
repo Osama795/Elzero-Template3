@@ -1,7 +1,4 @@
-/*
- ** Countdown Timer
- ** Video URL: https://www.youtube.com/watch?v=eFsiOTJrrE8
- */
+/*** Countdown Timer ***/
 
 // The End Of The Year Date
 // 1000 milliseconds = 1 Second
@@ -33,16 +30,6 @@ let counter = setInterval(() => {
   }
 }, 1000);
 
-/*
- ** Animate Width On Scrolling
- ** Video URL: https://youtu.be/sbIoIKI9FOc
- */
-
-/*
- ** Increase Numbers On Scrolling
- ** Video URL: https://youtu.be/PLsUdgLnzgQ
- */
-
 let progressSpans = document.querySelectorAll(".the-progress span");
 let section = document.querySelector(".our-skills");
 
@@ -50,8 +37,10 @@ let nums = document.querySelectorAll(".stats .number");
 let statsSection = document.querySelector(".stats");
 let started = false; // Function Started ? No
 
-// Scroll To Top
+// Select Scroll To Top button
 let scrollTop = document.querySelector(".scroll-top");
+
+/*** Animate Width On Scrolling ***/
 window.onscroll = function () {
   // Skills Animate Width
   if (window.scrollY >= section.offsetTop - 250) {
@@ -68,7 +57,7 @@ window.onscroll = function () {
   }
 
   /*``````````````````````````````````````````````````````*/
-  // Scroll To Top
+  // Show & Hide Scroll To Top Button
   if (window.scrollY >= 400) {
     scrollTop.style.display = "block";
   }
@@ -78,6 +67,7 @@ window.onscroll = function () {
   /*``````````````````````````````````````````````````````*/
 };
 
+/*** Function Increase Numbers On Scrolling ***/
 function startCount(el) {
   let goal = el.dataset.goal;
   let count = setInterval(() => {
@@ -89,7 +79,7 @@ function startCount(el) {
 }
 
 /*``````````````````````````````````````````````````````*/
-// Scroll To Top
+// Scroll To Top On Click
 scrollTop.onclick = () => {
   window.scrollTo({
       left: 0,
